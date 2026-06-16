@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Priyanshu Rajpurohit — B.Tech Student & Aspiring Developer from Jodhpur, Rajasthan. Skilled in C Programming, Algorithms and Web Development." />
+  <meta name="keywords" content="Priyanshu Rajpurohit, Portfolio, C Programming, Web Developer, B.Tech, Jodhpur" />
+  <meta name="author" content="Priyanshu Rajpurohit" />
+  <title>Priyanshu Rajpurohit | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Particle Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-text">PR</span>
+      <div class="logo-glow"></div>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+      <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+      <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="hero-greeting reveal-up">Hello, I'm</p>
+      <h1 class="hero-name reveal-up">
+        <span class="name-word">Priyanshu</span>
+        <span class="name-word gold">Rajpurohit</span>
+      </h1>
+      <div class="hero-role reveal-up">
+        <span class="role-prefix">I am a </span>
+        <span class="typed-text" id="typedText"></span>
+        <span class="typed-cursor">|</span>
+      </div>
+      <p class="hero-location reveal-up">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        Jodhpur, Rajasthan
+      </p>
+      <div class="hero-buttons reveal-up">
+        <a href="#projects" class="btn btn-primary" id="heroViewWork">
+          <span>View My Work</span>
+          <div class="btn-shine"></div>
+        </a>
+        <a href="#contact" class="btn btn-outline" id="heroContact">
+          <span>Get In Touch</span>
+        </a>
+      </div>
+      <div class="hero-scroll-indicator reveal-up">
+        <span>Scroll Down</span>
+        <div class="scroll-line"><div class="scroll-dot"></div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="avatar-container">
+        <div class="avatar-ring ring-1"></div>
+        <div class="avatar-ring ring-2"></div>
+        <div class="avatar-ring ring-3"></div>
+        <div class="avatar-core">
+          <div class="avatar-initials">PR</div>
+        </div>
+        <div class="orbit-dot dot-a"></div>
+        <div class="orbit-dot dot-b"></div>
+        <div class="orbit-dot dot-c"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get To Know Me</span>
+        <h2 class="section-title">About <span class="gold">Me</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-card glass reveal-left">
+          <div class="about-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+          </div>
+          <h3>Who I Am</h3>
+          <p>I'm <strong class="gold">Priyanshu Rajpurohit</strong>, a passionate first-year B.Tech student from Jodhpur, Rajasthan. I thrive on solving problems through code and building things that matter.</p>
+        </div>
+        <div class="about-card glass reveal-up">
+          <div class="about-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+          </div>
+          <h3>What I Do</h3>
+          <p>I specialize in <strong class="gold">C Programming</strong>, algorithm design, and flowchart creation. I'm actively expanding into web development and preparing for competitive exams.</p>
+        </div>
+        <div class="about-card glass reveal-right">
+          <div class="about-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h3>My Goals</h3>
+          <p>Aiming to master <strong class="gold">competitive programming</strong>, earn industry certifications (RSCIT, MS Excel, Tally), and build innovative projects that solve real-world problems.</p>
+        </div>
+      </div>
+      <div class="about-summary glass reveal-up">
+        <div class="summary-quote">
+          <div class="quote-mark">"</div>
+          <p>First-year B.Tech student at Lachoo Memorial College of Science &amp; Technology with a strong interest in C programming and competitive exam preparation. Skilled in core programming fundamentals, algorithm design, and actively developing technical skills in coding and web development.</p>
+        </div>
+        <div class="summary-stats">
+          <div class="stat-item">
+            <span class="stat-number gold" data-target="1">0</span>
+            <span class="stat-label">Year B.Tech</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number gold" data-target="5">0</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number gold" data-target="4">0</span>
+            <span class="stat-label">Core Skills</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SKILLS ==================== -->
+  <section class="section section-dark" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">Technical <span class="gold">Skills</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="skills-grid">
+
+        <!-- Programming -->
+        <div class="skill-category glass reveal-left">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+            </div>
+            <h3>Programming</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>C Programming</span><span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>Algorithms & Logic</span><span class="skill-pct">72%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="72"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>Basic Web Dev (HTML/CSS)</span><span class="skill-pct">60%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="60"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Concepts -->
+        <div class="skill-category glass reveal-up">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+            </div>
+            <h3>Concepts</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Flowchart Design</span>
+            <span class="skill-tag">Algorithm Design</span>
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Computer Networking</span>
+            <span class="skill-tag">Data Structures</span>
+            <span class="skill-tag">Logical Thinking</span>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-category glass reveal-right">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+            </div>
+            <h3>Tools & Software</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">MS Excel</span>
+            <span class="skill-tag">Text Editors</span>
+            <span class="skill-tag">Design Tools</span>
+            <span class="skill-tag">Tally (Learning)</span>
+            <span class="skill-tag">RSCIT (Pursuing)</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROJECTS ==================== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I've Built</span>
+        <h2 class="section-title">My <span class="gold">Projects</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card glass reveal-up" id="project1">
+          <div class="project-card-glow"></div>
+          <div class="project-number">01</div>
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+          </div>
+          <h3>C Programming Fundamentals Suite</h3>
+          <p>A collection of C programs implementing loops, conditionals, and arrays — demonstrating core programming logic and structured thinking.</p>
+          <div class="project-tags">
+            <span>C Language</span>
+            <span>Arrays</span>
+            <span>Loops</span>
+            <span>Conditionals</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com" target="_blank" class="project-link" id="proj1Github">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card glass reveal-up" id="project2" style="animation-delay:.15s">
+          <div class="project-card-glow"></div>
+          <div class="project-number">02</div>
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          </div>
+          <h3>Algorithm & Flowchart Designer</h3>
+          <p>Designed and documented algorithms and flowcharts for common problem-solving scenarios, building a strong foundation in computational thinking.</p>
+          <div class="project-tags">
+            <span>Algorithms</span>
+            <span>Flowcharts</span>
+            <span>Logic Design</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com" target="_blank" class="project-link" id="proj2Github">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card glass reveal-up" id="project3" style="animation-delay:.3s">
+          <div class="project-card-glow"></div>
+          <div class="project-number">03</div>
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          </div>
+          <h3>Portfolio Website</h3>
+          <p>This very portfolio — built with semantic HTML5, modern CSS3 animations, vanilla JavaScript, and a premium black & gold design system.</p>
+          <div class="project-tags">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>Responsive</span>
+          </div>
+          <div class="project-links">
+            <a href="#home" class="project-link" id="proj3Live">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+              Live
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EDUCATION ==================== -->
+  <section class="section section-dark" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My Journey</span>
+        <h2 class="section-title">Education &amp; <span class="gold">Achievements</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal-left" id="edu1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <div class="timeline-year">2025 – 2029</div>
+            <h3>B.Tech — First Year</h3>
+            <h4 class="gold">Lachoo Memorial College of Science &amp; Technology</h4>
+            <p>Jodhpur, Rajasthan. Pursuing Bachelor of Technology with a focus on programming fundamentals, computer science concepts, and algorithm design.</p>
+            <div class="timeline-tags">
+              <span>C Programming</span>
+              <span>Computer Science</span>
+              <span>Algorithms</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right" id="edu2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <div class="timeline-year">2023 – 2024</div>
+            <h3>High School — CBSE</h3>
+            <h4 class="gold">CBSE Board</h4>
+            <p>Completed Class 12 under the CBSE curriculum, building a strong academic foundation in Mathematics, Physics, and Computer Science.</p>
+            <div class="timeline-tags">
+              <span>CBSE</span>
+              <span>Mathematics</span>
+              <span>Physics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left" id="edu3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <div class="timeline-year">Ongoing</div>
+            <h3>Certifications &amp; Activities</h3>
+            <h4 class="gold">Self-Development</h4>
+            <p>Actively pursuing RSCIT, MS Excel, and Tally certifications. Participated in Engineers Day celebrations at college and consistently practicing competitive programming.</p>
+            <div class="timeline-tags">
+              <span>RSCIT</span>
+              <span>MS Excel</span>
+              <span>Tally</span>
+              <span>Engineers Day</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="section-title">Get In <span class="gold">Touch</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <p class="contact-intro">I'm always open to new opportunities, collaborations, and conversations. Whether you have a question, a project idea, or just want to say hi — feel free to reach out!</p>
+          <div class="contact-details">
+            <div class="contact-item glass">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              </div>
+              <div>
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Jodhpur, Rajasthan</span>
+              </div>
+            </div>
+            <div class="contact-item glass">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </div>
+              <div>
+                <span class="contact-label">Email</span>
+                <span class="contact-value">priyanshu@email.com</span>
+              </div>
+            </div>
+            <div class="contact-item glass">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+              </div>
+              <div>
+                <span class="contact-label">GitHub</span>
+                <span class="contact-value">github.com/priyanshu</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form glass reveal-right" id="contactForm">
+          <div class="form-group">
+            <label for="contactName">Your Name</label>
+            <input type="text" id="contactName" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Email Address</label>
+            <input type="email" id="contactEmail" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="contactSubject">Subject</label>
+            <input type="text" id="contactSubject" name="subject" placeholder="Project Collaboration" required />
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="message" rows="5" placeholder="Tell me about your project or just say hello!" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="contactSubmit">
+            <span id="btnText">Send Message</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+            <div class="btn-shine"></div>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            Message sent successfully!
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-logo">PR</div>
+      <p class="footer-tagline">Building the future, one line of code at a time.</p>
+      <div class="footer-socials">
+        <a href="https://github.com" target="_blank" class="social-link" id="footerGithub" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="social-link" id="footerLinkedin" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 <span class="gold">Priyanshu Rajpurohit</span>. All rights reserved.</p>
+      <p>Crafted with <span class="gold">♥</span> from Jodhpur, Rajasthan</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
